@@ -5,5 +5,6 @@
 .project
 .settings
 .DS_Store
+/branches
 vendor/github.com
 vendor/golang.org
