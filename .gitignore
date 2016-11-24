@@ -5,6 +5,6 @@
 .project
 .settings
 .DS_Store
-/branches
+/best-practices
 vendor/github.com
 vendor/golang.org
