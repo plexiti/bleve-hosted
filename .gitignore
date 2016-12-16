@@ -5,4 +5,5 @@
 .project
 .settings
 .DS_Store
-/bleve-hosted
+vendor/github.com
+vendor/golang.org
