@@ -1,0 +1,12 @@
+=============== Dec 16, 2016 (CET) ===============
+18:11:57.014581 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:11:57.015170 db@open opening
+18:11:57.015434 version@stat F·[] S·0B[] Sc·[]
+18:11:57.015598 db@janitor F·2 G·0
+18:11:57.015623 db@open done T·440.018µs
+18:11:57.363816 memdb@flush N·59902 S·3MiB
+18:11:57.366944 db@close closing
+18:11:57.413123 memdb@flush created L0@3 N·59902 S·1MiB "b/b../_/,v7013":"v,v1"
+18:11:57.413141 memdb@flush exiting
+18:11:57.413147 memdb@flush revert @3
+18:11:57.416919 db@close done T·49.970983ms

@@ -15,7 +15,7 @@ for b in `git branch --remote | awk -F ' +' '! /\(no branch\)/ {print $2}'`; do
   then
       git checkout -B ${b##*/} $b
       hugoidx
-      bleve_export search.bleve "../indexes/${b##*/}.export"
+      mv search.bleve "../indexes/${b##*/}"
       rm -rf search.bleve
   fi
 done

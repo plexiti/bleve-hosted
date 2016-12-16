@@ -1,0 +1,8 @@
+=============== Dec 16, 2016 (CET) ===============
+18:11:59.372940 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:11:59.373541 db@open opening
+18:11:59.373848 version@stat F·[] S·0B[] Sc·[]
+18:11:59.374019 db@janitor F·2 G·0
+18:11:59.374046 db@open done T·490.428µs
+18:11:59.700557 db@close closing
+18:11:59.708686 db@close done T·8.124363ms
