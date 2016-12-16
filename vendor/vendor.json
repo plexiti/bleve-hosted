@@ -937,5 +937,9 @@
 			"revisionTime": "2016-12-16T03:07:57Z"
 		}
 	],
-	"rootPath": "github.com/plexiti/bleve-hosted"
+	"rootPath": "github.com/plexiti/bleve-hosted",
+	"heroku": {
+		"install" : [ "." ],
+		"goVersion": "go1.7.4"
+	}
 }
