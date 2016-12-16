@@ -1,1 +1,1 @@
-web: bleve-hosted
+web: bleve-hosted --addr :$PORT
