@@ -1,8 +1,13 @@
-=============== Dec 16, 2016 (CET) ===============
-18:12:01.552354 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:12:01.552894 db@open opening
-18:12:01.553195 version@stat F·[] S·0B[] Sc·[]
-18:12:01.553329 db@janitor F·2 G·0
-18:12:01.553354 db@open done T·446.65µs
-18:12:01.878921 db@close closing
-18:12:01.886980 db@close done T·8.05542ms
+=============== Dec 17, 2016 (CET) ===============
+19:08:13.651314 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:08:13.651929 db@open opening
+19:08:13.652242 version@stat F·[] S·0B[] Sc·[]
+19:08:13.652424 db@janitor F·2 G·0
+19:08:13.652449 db@open done T·506.608µs
+19:08:13.986900 memdb@flush N·47768 S·3MiB
+19:08:14.037016 memdb@flush created L0@3 N·47768 S·1MiB "b/b../_/,v4407":"v,v1"
+19:08:14.037078 version@stat F·[1] S·1MiB[1MiB] Sc·[0.25]
+19:08:14.037254 memdb@flush committed F·1 T·50.297421ms
+19:08:14.037661 journal@remove removed @1
+19:08:14.052312 db@close closing
+19:08:14.061809 db@close done T·9.493788ms

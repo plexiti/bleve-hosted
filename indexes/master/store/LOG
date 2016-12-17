@@ -1,12 +1,12 @@
-=============== Dec 16, 2016 (CET) ===============
-18:12:08.494083 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:12:08.494791 db@open opening
-18:12:08.495082 version@stat F·[] S·0B[] Sc·[]
-18:12:08.495257 db@janitor F·2 G·0
-18:12:08.495279 db@open done T·472.79µs
-18:12:08.865437 memdb@flush N·59742 S·3MiB
-18:12:08.868421 db@close closing
-18:12:08.912055 memdb@flush created L0@3 N·59742 S·1MiB "b/b../_/,v8683":"v,v1"
-18:12:08.912078 memdb@flush exiting
-18:12:08.912083 memdb@flush revert @3
-18:12:08.915906 db@close done T·47.481487ms
+=============== Dec 17, 2016 (CET) ===============
+19:08:20.692664 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:08:20.693304 db@open opening
+19:08:20.693580 version@stat F·[] S·0B[] Sc·[]
+19:08:20.693771 db@janitor F·2 G·0
+19:08:20.693802 db@open done T·482.681µs
+19:08:21.054737 memdb@flush N·59806 S·3MiB
+19:08:21.058019 db@close closing
+19:08:21.103450 memdb@flush created L0@3 N·59806 S·1MiB "b/b../_/,v6971":"v,v1"
+19:08:21.103471 memdb@flush exiting
+19:08:21.103477 memdb@flush revert @3
+19:08:21.107113 db@close done T·49.092968ms
