@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
+if [ "$1" != "master" ] && [ "$1" != "branch" ]
+then
+    echo "index.sh master -> Index master excluding draft files"
+    echo "index.sh branch -> Index all branches except of master including draft files"
+    exit 0
+fi
+
 if [ ! -d "best-practices" ]
 then
     git clone git@github.com:camunda/best-practices.git best-practices
