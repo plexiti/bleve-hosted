@@ -16,23 +16,31 @@ mkdir -p indexes
 cd best-practices
 git fetch --all --prune
 
-for b in `git branch --remote | awk -F ' +' '! /\(no branch\)/ {print $2}'`; do
-  BRANCH=${b##*/}
-  if [ ${BRANCH} != "HEAD" ]
-  then
-      git checkout -B ${BRANCH} $b
-      if [ ${BRANCH} != "master" ]
+if [ "$1" == "master" ]
+then
+  git checkout -B master origin/master
+  grep "^\s*draft:\s*true\s*$" ./best-practices/content --include="index.adoc" -Rl | xargs rm $1
+  rm -rf ../indexes/master
+  hugoidx
+  mv search.bleve "../indexes/master"
+  rm -rf search.bleve
+  git checkout .
+  git clean -df
+else
+    for b in `git branch --remote | awk -F ' +' '! /\(no branch\)/ {print $2}'`; do
+      BRANCH=${b##*/}
+      if [ ${BRANCH} != "HEAD" ] && [ ${BRANCH} != "master" ]
       then
-        sed -i -- "s/camunda\.com\/best-practices/camunda\.com\/best-practices-branch\/${BRANCH}/g" config.yaml
+          git checkout -B ${BRANCH} $b
+          sed -i -- "s/camunda\.com\/best-practices/camunda\.com\/best-practices-branch\/${BRANCH}/g" config.yaml
+          rm -rf ../indexes/$BRANCH
+          hugoidx
+          mv search.bleve "../indexes/${BRANCH}"
+          rm -rf search.bleve
+          git checkout .
+          git clean -f
       fi
-      grep "^\s*draft:\s*true\s*$" ./best-practices/content --include="index.adoc" -Rl | xargs rm $1
-      rm -rf ../indexes/$BRANCH
-      hugoidx
-      mv search.bleve "../indexes/${BRANCH}"
-      rm -rf search.bleve
-      git checkout .
-      git clean -f
-  fi
-done
+    done
+fi
 
 cd -
