@@ -18,6 +18,7 @@ for b in `git branch --remote | awk -F ' +' '! /\(no branch\)/ {print $2}'`; do
       then
         sed -i -- "s/camunda\.com\/best-practices/camunda\.com\/best-practices-branch\/${b##*\/}/g" config.yaml
       fi
+      grep "^\s*draft:\s*true\s*$" ./best-practices/content --include="index.adoc" -Rl | xargs rm $1
       hugoidx
       mv search.bleve "../indexes/${b##*/}"
       rm -rf search.bleve
