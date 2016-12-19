@@ -11,16 +11,17 @@ cd best-practices
 git fetch --all --prune
 
 for b in `git branch --remote | awk -F ' +' '! /\(no branch\)/ {print $2}'`; do
-  if [ ${b##*/} != "HEAD" ]
+  BRANCH=${b##*/}
+  if [ ${BRANCH} != "HEAD" ]
   then
-      git checkout -B ${b##*/} $b
-      if [ ${b##*/} != "master" ]
+      git checkout -B ${BRANCH} $b
+      if [ ${BRANCH} != "master" ]
       then
-        sed -i -- "s/camunda\.com\/best-practices/camunda\.com\/best-practices-branch\/${b##*\/}/g" config.yaml
+        sed -i -- "s/camunda\.com\/best-practices/camunda\.com\/best-practices-branch\/${BRANCH}/g" config.yaml
       fi
       grep "^\s*draft:\s*true\s*$" ./best-practices/content --include="index.adoc" -Rl | xargs rm $1
       hugoidx
-      mv search.bleve "../indexes/${b##*/}"
+      mv search.bleve "../indexes/${BRANCH}"
       rm -rf search.bleve
       git checkout .
       git clean -f
